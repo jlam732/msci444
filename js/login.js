@@ -13,7 +13,7 @@ $(document).ready(function() {
     		return;
     	}
     	$.ajax({
-    		url: '../php/login.php',
+    		url: '../php/login_script.php',
          	data: values,
          	type: 'post',
          	success: function(user) {
