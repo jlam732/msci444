@@ -15,6 +15,14 @@
 	    if(count($array) == 1) {
 	        if($array[0]["password"] == $_POST["password"]) {
 		    header('Content-Type: application/json');
+		    session_start();
+		    $_SESSION["id"] = $array[0]["id"];
+		    $_SESSION["alias"] = $array[0]["alias"];
+		    $_SESSION["first_name"] = $array[0]["first_name"];
+		    $_SESSION["last_name"] = $array[0]["last_name"];
+		    $_SESSION["type"] = $array[0]["type"];
+		    $_SESSION["email"] = $array[0]["email"];
+		    $_SESSION["phone_num"] = $array[0]["phone_num"];
 		    echo json_encode($array[0]);
 		} else {
 		    echo "Incorrect password, please change and try again.";
