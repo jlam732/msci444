@@ -16,8 +16,15 @@ $(document).ready(function() {
     		url: '../php/login.php',
          	data: values,
          	type: 'post',
-         	success: function(output) {
-                alert(output);
+         	success: function(user) {
+         		var cookie = "id=" + user["id"] + ";"
+         				   + "username=" + user["alias"] + ";"
+         				   + "first_name=" + user["first_name"] + ";"
+         				   + "last_name=" + user["last_name"] + ";"
+         				   + "first_name=" + user["first_name"] + ";"
+         				   + "phone_num=" + user["phone_num"] + ";"
+         				   + "type=" + user["type"] + ";"
+         		document.cookie=cookie;
             },
             error: function(error) {
             	console.log(error);
