@@ -10,13 +10,13 @@
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	    // use exec() because no results are returned
-	    $sql = "SELECT * FROM user WHERE alias='" . $_GET["0"]["value"] . "'";
+	    $sql = "SELECT * FROM user WHERE alias='" . $_POST["alias"] . "'";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
 		    // output data of each row
 		    while($row = $result->fetch_assoc()) {
-		        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+		        echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
 		    }
 		} else {
 		    echo "0 results";
