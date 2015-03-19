@@ -20,6 +20,7 @@ $(document).ready(function() {
                 alert(output);
             },
             error: function(error) {
+            	console.log(error);
             	$('.alert').text(error).show();
             }
 		});
