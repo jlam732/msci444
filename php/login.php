@@ -9,21 +9,21 @@
 	    // set the PDO error mode to exception
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	    // use exec() because no results are returned
-	    $sql = "SELECT * FROM user WHERE alias='" . $_POST["alias"] . "'";
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) {
-		    // output data of each row
-		    while($row = $result->fetch_assoc()) {
-		        echo "id: " . $row["id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
-		    }
+	    $sql = "SELECT id, first_name, last_name, password FROM user WHERE alias='" . $_POST["alias"] . "'";
+	    $result = $conn->query($sql);
+	    $array = $result->fetchAll();
+	    if(count($array) == 1) {
+	        if($array[0]["password"] == $_POST["password"]) {
+		    echo "yayyyyy";
 		} else {
-		    echo "0 results";
+		    echo "Incorrect password, please change and try again.";
 		}
-		$conn->close();
+	    } else {
+		echo "Username not found, please try another account.";
+	    }
+	    $conn->close();
 	} catch(PDOException $e) {
-    	echo $sql . "<br>" . $e->getMessage();
-    }
+	    	echo $sql . "<br>" . $e->getMessage();
+	}
 	$conn = null;
 ?>
