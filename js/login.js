@@ -17,7 +17,7 @@ $(document).ready(function() {
          	data: values,
          	type: 'post',
          	success: function(user) {
-         		window.location.href("/pages/index.html");
+         		window.location.href = "/~jg2lam/pages/index.html";
             },
             error: function(error) {
             	console.log(error);
