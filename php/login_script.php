@@ -42,6 +42,8 @@
 	    //$conn->close();
 	} catch(PDOException $e) {
 	    	echo $sql . "<br>" . $e->getMessage();
+	} catch(Exception $e) {
+		echo $e->getMessage();
 	}
 	$conn = null;
 ?>
