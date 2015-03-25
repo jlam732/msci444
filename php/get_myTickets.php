@@ -1,5 +1,5 @@
 <?php
-	include_once "creds.php"
+	include_once "creds.php";
 	try {
 	    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 	    // set the PDO error mode to exception
