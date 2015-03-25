@@ -149,6 +149,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
+                <div class="alert alert-danger" style="display:none;"></div>
                 <div class="dataTable_wrapper">
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
@@ -658,15 +659,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-                responsive: true
-        });
-    });
-    </script>
+    <script src="../js/myticket.js"></script>
 
 </body>
 

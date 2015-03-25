@@ -1,8 +1,5 @@
 <?php
-	$servername = "localhost";
-	$username = "jg2lam";
-	$password = "Winter2015";
-	$dbname = "jg2lam";
+	include_once "creds.php"
 
 	try {
 	    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
