@@ -16,8 +16,8 @@ $(document).ready(function() {
     		url: '../php/login_script.php',
          	data: values,
          	type: 'post',
-         	success: function(user) {
-         		window.location.href = "/~jg2lam/pages/index.html";
+         	success: function(link) {
+         		window.location.href = link;
             },
             error: function(error) {
             	console.log(error);
