@@ -6,14 +6,18 @@
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	    $sql = "";
-            session_start();
+        session_start();
 	    if($_SESSION["type"] == 1) {
-	    	$sql = "SELECT * FROM ticket WHERE creator ='" . $_SESSION["id"] . "'";
+	    	$sql = "SELECT t.*, u.first_name, u.last_name FROM ticket t INNER JOIN user u "
+	    		 . "ON t.creator = u.id"
+	    		 . "WHERE creator ='" . $_SESSION["id"] . "'";
 	    } else {
-	    	$sql = "SELECT * FROM ticket WHERE technician ='" . $_SESSION["id"] . "'";
+	    	$sql = "SELECT t.*, u.first_name, u.last_name FROM ticket t INNER JOIN user u "
+	    		 . "ON t.creator = u.id"
+	    		 . "WHERE technician ='" . $_SESSION["id"] . "'";
 	    }
 	    $result = $conn->query($sql);
-	    $tickets = $result->fetchAll();
+	    $tickets = $result->fetchAll(PDO::FETCH_ASSOC);
 	    echo json_encode($tickets);
 	    //$conn->close();
 	} catch(PDOException $e) {
