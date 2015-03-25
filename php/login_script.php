@@ -25,16 +25,16 @@
 		    $_SESSION["phone_num"] = $array[0]["phone_num"];
 		    switch($_SESSION["type"]) {
 		    	case 1: //client
-		    		echo "~jg2lam/pages/mytickets.php";
+		    		echo json_encode("mytickets.php");
 		    		break;
 		    	case 2: //technician
-		    		echo "~jg2lam/pages/mytickets_tech.php";
+		    		echo json_encode("mytickets_tech.php");
 		    		break;
 		    	case 3: //manager
-		    		echo "~jg2lam/pages/mytickets_manager.php";
+		    		echo json_encode("mytickets_manager.php");
 		    		break;
 		    	default:
-		    		echo "~jg2lam/pages/index.html";
+		    		echo json_encode("index.html");
 		    }
 		} else {
 		    echo "Incorrect password, please change and try again.";
