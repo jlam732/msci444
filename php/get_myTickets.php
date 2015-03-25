@@ -9,11 +9,11 @@
         session_start();
 	    if($_SESSION["type"] == 1) {
 	    	$sql = "SELECT t.*, u.first_name, u.last_name FROM ticket t INNER JOIN user u "
-	    		 . "ON t.creator = u.id"
+	    		 . "ON t.creator = u.id "
 	    		 . "WHERE creator ='" . $_SESSION["id"] . "'";
 	    } else {
 	    	$sql = "SELECT t.*, u.first_name, u.last_name FROM ticket t INNER JOIN user u "
-	    		 . "ON t.creator = u.id"
+	    		 . "ON t.creator = u.id "
 	    		 . "WHERE technician ='" . $_SESSION["id"] . "'";
 	    }
 	    $result = $conn->query($sql);
