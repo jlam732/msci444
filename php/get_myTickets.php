@@ -6,11 +6,11 @@
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	    $sql = "";
-	    echo $_SESSION;
+            session_start();
 	    if($_SESSION["type"] == 1) {
 	    	$sql = "SELECT * FROM ticket WHERE creator ='" . $_SESSION["id"] . "'";
 	    } else {
-	    	$sql = "SELECT * FROM ticket WHERE technican ='" . $_SESSION["id"] . "'";
+	    	$sql = "SELECT * FROM ticket WHERE technician ='" . $_SESSION["id"] . "'";
 	    }
 	    $result = $conn->query($sql);
 	    $tickets = $result->fetchAll();
