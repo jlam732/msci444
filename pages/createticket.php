@@ -131,11 +131,11 @@
                     <form role="form" id="createTicket">
                         <div class="form-group">
                             <label>Ticket Subject</label>
-                            <input class="form-control" placeholder="Enter text">
+                            <input name="subject" class="form-control" placeholder="Enter text">
                         </div>
                         <div class="form-group">
                             <label>Ticket Type</label>
-                            <select class="form-control">
+                            <select name="type" class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -145,11 +145,11 @@
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea name="desc" class="form-control" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Priority</label>
-                            <select class="form-control">
+                            <select name="priority" class="form-control">
                                 <option>1 - Critical</option>
                                 <option>2 - High</option>
                                 <option>3 - Medium</option>
