@@ -131,7 +131,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
+                    <h1 class="page-header">My Tickets</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -142,11 +142,13 @@
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+                                <th>Ticket ID</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th>Technician Assigned</th>
+                                <th>Date Created</th>
                             </tr>
                         </thead>
                         <tbody>
