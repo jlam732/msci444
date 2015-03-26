@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="mytickets.php">SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.php">MSYDE IT Consulting Group</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -101,17 +101,6 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
                         <li>
                             <a href="mytickets.php"><i class="fa fa-dashboard fa-fw"></i> My Tickets</a>
                         </li>
@@ -138,16 +127,15 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="alert alert-success" style="display:none;"></div>
                     <div class="alert alert-danger" style="display:none;"></div>
                     <form role="form" id="createTicket">
                         <div class="form-group">
                             <label>Ticket Subject</label>
-                            <input name="subject" class="form-control" placeholder="Enter text">
+                            <input class="form-control" placeholder="Enter text">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-lg-3">
                             <label>Ticket Type</label>
-                            <select name="type" class="form-control">
+                            <select class="form-control">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -157,11 +145,11 @@
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea name="desc" class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="3"></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-lg-3">
                             <label>Priority</label>
-                            <select name="priority" class="form-control">
+                            <select class="form-control">
                                 <option>1 - Critical</option>
                                 <option>2 - High</option>
                                 <option>3 - Medium</option>
