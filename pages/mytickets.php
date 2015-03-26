@@ -154,11 +154,13 @@
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+				<th>Ticket ID</th>
+                                <th>Type</th>
+                                <th>Desc</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th>Technician Name</th>
+                                <th>Date Created</th>  
                             </tr>
                         </thead>
                         <tbody>
