@@ -133,7 +133,7 @@
                             <label>Ticket Subject</label>
                             <input class="form-control" placeholder="Enter text">
                         </div>
-                        <div class="form-group col-lg-3">
+                        <div class="form-group">
                             <label>Ticket Type</label>
                             <select class="form-control">
                                 <option>1</option>
@@ -147,7 +147,7 @@
                             <label>Description</label>
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
-                        <div class="form-group col-lg-3">
+                        <div class="form-group">
                             <label>Priority</label>
                             <select class="form-control">
                                 <option>1 - Critical</option>
