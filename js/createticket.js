@@ -2,9 +2,12 @@ $(document).ready(function() {
     $("form").submit(function() {
         //try to serialize the form
         var data = $("#createTicket").serializeArray();
-        
+        event.preventDefault();
         //maybe do some error checking
-        
+        if(data.length == 0) {
+            console.log("something wrong with data");
+            return false;
+        }
         //hack to change priority to a number
         data[3].value = data[3].value.slice(0,1);
 
