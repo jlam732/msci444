@@ -1,38 +1,26 @@
 $(document).ready(function() {
     $("form").submit(function() {
         //try to serialize the form
-        var data = $("#createTicket").serialize();
-
+        var data = $("#createTicket").serializeArray();
+        
         //maybe do some error checking
+        
+        //hack to change priority to a number
+        data[3].value = data[3].value.slice(0,1);
+
         console.log(data);
-        return false;
+        
         $.ajax({
             type: "POST",
             url: "../php/createTicket.php",
             data: data, 
-            success: function(data) {
-            //put the tickets dynamically in the table using foreach
-            var tickets = JSON.parse(data);
-                var dataTable = $('#dataTables-example tbody');
-                for(var index = 0; index < tickets.length; index++) {
-            var ticket = tickets[index];
-            ticket["first_name"] += " " + ticket["last_name"];
-            delete ticket["last_name"];
-                    var tr = "<tr " + (index % 2 == 0 ? 'class="odd">' : 'class="even">');
-                    for (var key in ticket) {
-                        if (ticket.hasOwnProperty(key)) {
-                            tr += "<td>" + ticket[key] + "</td>";
-                        }
-                    }
-                    dataTable.append(tr + "</tr>");
-                }
-                $('#dataTables-example').DataTable({
-                  responsive: true
-                }); 
+            success: function(ticket) {
+                //say some nice message, give the ID of the ticket
+                alert(ticket);
             },
             error: function(error) {
                 console.log(error);
-                $('.alert').text(error.responseText).show();
+                $('.alert-danger').text(error.responseText).show();
             }
         });
 
