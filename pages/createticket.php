@@ -137,14 +137,14 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <div class="alert alert-danger" style="display:none;"></div>
-                    <form role="form">
+                    <form role="form" id="createTicket">
                         <div class="form-group">
                             <label>Ticket Subject</label>
                             <input class="form-control" placeholder="Enter text">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-lg-3">
                             <label>Ticket Type</label>
                             <select class="form-control">
                                 <option>1</option>
@@ -158,7 +158,7 @@
                             <label>Description</label>
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-lg-3">
                             <label>Priority</label>
                             <select class="form-control">
                                 <option>1 - Critical</option>
