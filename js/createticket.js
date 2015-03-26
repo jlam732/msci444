@@ -16,6 +16,7 @@ $(document).ready(function() {
             data: data, 
             success: function(ticket) {
                 //say some nice message, give the ID of the ticket
+                console.log(ticket);
                 alert(ticket);
             },
             error: function(error) {
