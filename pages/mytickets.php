@@ -139,6 +139,7 @@
                             <tr>
                                 <th>Ticket ID</th>
                                 <th>Type</th>
+                                <th>Subject</th>
                                 <th>Description</th>
                                 <th>Status</th>
                                 <th>Priority</th>

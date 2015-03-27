@@ -101,13 +101,10 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="mytickets.php"><i class="fa fa-dashboard fa-fw"></i> My Tickets</a>
+                            <a href="mytickets_manager.php"><i class="fa fa-dashboard fa-fw"></i> My Tickets</a>
                         </li>
                         <li>
-                            <a href="createticket.php"><i class="fa fa-table fa-fw"></i> Create Ticket</a>
-                        </li>
-                        <li>
-                            <a href="faq.php"><i class="fa fa-edit fa-fw"></i> FAQ</a>
+                            <a href="mytickets_manager.php"><i class="fa fa-dashboard fa-fw"></i> My Tickets</a>
                         </li>
                     </ul>
                 </div>
@@ -135,6 +132,7 @@
                                         <tr>
                                             <th>Ticket ID</th>
                                             <th>Type</th>
+                                            <th>Subject</th>
                                             <th>Description</th>
                                             <th>Status</th>
                                             <th>Priority</th>
