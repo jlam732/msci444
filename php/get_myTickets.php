@@ -11,10 +11,13 @@
                 $sql = "SELECT t.id, t.type, t.description, t.status, t.priority, u.first_name, u.last_name, t.creationDate FROM ticket t LEFT JOIN user u "
                          . "ON t.technician = u.id "
                          . "WHERE creator ='" . $_SESSION["id"] . "'";
-            } else {
+            } else if($_SESSION["type"] == 2) {
                 $sql = "SELECT t.id, t.type, t.description, t.status, t.priority, u.first_name, u.last_name, t.creationDate FROM ticket t INNER JOIN user u "
                          . "ON t.creator = u.id "
                          . "WHERE technician ='" . $_SESSION["id"] . "'";
+            } else if($_SESSION["type"] == 3) {
+                $sql = "SELECT t.id, t.type, t.description, t.status, t.priority, u.first_name, u.last_name, t.creationDate FROM ticket t INNER JOIN user u "
+                         . "ON t.creator = u.id";
             }
             $result = $conn->query($sql);
             $tickets = $result->fetchAll(PDO::FETCH_ASSOC);

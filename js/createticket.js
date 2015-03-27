@@ -19,8 +19,7 @@ $(document).ready(function() {
             data: data, 
             success: function(ticket) {
                 //say some nice message, give the ID of the ticket
-                console.log(ticket);
-                alert("Success! Your ticket number is " + ticket + ".");
+                alert("Success! Your ticket number is " + ticket);
             },
             error: function(error) {
                 console.log(error);
