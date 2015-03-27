@@ -13,16 +13,18 @@ $(document).ready(function() {
                 data[i].value = data[i].value.slice(0,1);
             }
         }
-
         console.log(data);
-        return false;
         $.ajax({
             type: "POST",
-            url: "../php/editTicket.php",
+            url: "../php/updateTicket.php",
             data: data, 
-            success: function(ticket) {
+            success: function(status) {
                 //say some nice message, give the ID of the ticket
-                alert("Success! Your ticket number is " + ticket);
+                if(status) {
+                    alert("Success! Your ticket was updated");
+                } else {
+                    alert("No changes were made to the ticket");
+                }
             },
             error: function(error) {
                 console.log(error);
