@@ -176,6 +176,9 @@
                 <div class="col-lg-6">
                     <div class="alert alert-danger" style="display:none;"></div>
                     <form role="form" id="createTicket">
+                        <div class="form-group" style="display:none;">
+                            <input name="id" class="form-control" value="<?php echo $ticket[0]["id"]; ?>">
+                        </div>
                         <div class="form-group">
                             <label>Ticket Subject</label>
                             <input name="subject" class="form-control" value="<?php echo $ticket[0]["subject"]; ?>">
@@ -238,7 +241,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-    <script src="../js/createticket.js"></script>
+    <script src="../js/editticket.js"></script>
 
 </body>
 
