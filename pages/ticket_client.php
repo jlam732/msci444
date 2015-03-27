@@ -1,6 +1,9 @@
 <?php
     session_start();
     include_once "../php/creds.php";
+    $ticket = [];
+    $activities = [];
+    $assignees = [];
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         // set the PDO error mode to exception
@@ -12,13 +15,11 @@
              . "WHERE t.id ='" . $_GET["id"] . "'";
         $result = $conn->query($sql);
         $ticket = $result->fetchAll(PDO::FETCH_ASSOC);
-
         //get all activity for related ticket
         $sql = "SELECT a.id, a.name, a.description, a.creationDate FROM activity a "
              . "WHERE a.ticket_id ='" . $_GET["id"] . "' ORDER BY a.creationDate asc";
         $result = $conn->query($sql);
         $activities = $result->fetchAll(PDO::FETCH_ASSOC);
-        
         //if it's the technician, then we need to be able to assign the ticket to other technicians or manager
         //so we need that info
         $assignees = [];
@@ -28,11 +29,12 @@
             $result = $conn->query($sql);
             $activities = $result->fetchAll(PDO::FETCH_ASSOC);    
         }
-        $conn->close();
+        //$conn->close();
     } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
     }
     $conn = null;
+    echo var_dump($ticket);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -176,16 +178,21 @@
                     <form role="form" id="createTicket">
                         <div class="form-group">
                             <label>Ticket Subject</label>
-                            <input name="subject" class="form-control" placeholder="Enter text">
+                            <input name="subject" class="form-control" value="<?php echo $ticket[0]["subject"]; ?>">
                         </div>
                         <div class="form-group">    
                             <label>Ticket Type</label>
                             <select name="type" class="form-control">
-                                <option>Domain Access Issue</option>
-                                <option>Hardware Required</option>
-                                <option>Request for Software</option>
-                                <option>Server Support</option>
-                                <option>Software Issue</option>
+				<?php if($_SESSION["type"] != 1) { ?>
+				<option <?php echo substr($ticket[0]["type"],0,1) == "D" ? "selected='selected'" : "" ?>>Domain Access Issue</option>
+                                <option <?php echo substr($ticket[0]["type"],0,1) == "H" ? "selected='selected'" : "" ?>>Hardware Required</option>
+                                <option <?php echo substr($ticket[0]["type"],0,1) == "R" ? "selected='selected'" : ""; ?>>Request for Software</option>
+                                <option <?php echo substr($ticket[0]["type"],0,2) == "Se" ? "selected='selected'" : ""; ?>>Server Support</option>
+                                <option <?php echo substr($ticket[0]["type"],0,2) == "So" ? "selected='selected'" : ""; ?>>Software Issue</option>
+
+				<?php } else { ?>
+				<option><?php echo $ticket[0]["type"]; ?></option>
+				<?php } ?>
                             </select>
                         </div>
                         <div class="form-group">
