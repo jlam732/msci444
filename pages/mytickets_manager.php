@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="mytickets_manager.php">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -104,7 +104,7 @@
                             <a href="mytickets_manager.php"><i class="fa fa-ticket fa-fw"></i> My Tickets</a>
                         </li>
                         <li>
-                            <a href="mytickets_manager.php"><i class="fa fa-bar-chart fa-fw"></i> My Reports</a>
+                            <a href="myreports.php"><i class="fa fa-bar-chart fa-fw"></i> My Reports</a>
                         </li>
                     </ul>
                 </div>

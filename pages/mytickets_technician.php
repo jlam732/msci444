@@ -23,6 +23,12 @@
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
+    <!-- DataTables CSS -->
+    <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    
     <!-- Morris Charts CSS -->
     <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
 
@@ -51,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">MSYDE IT Consulting Group</a>
+                <a class="navbar-brand" href="mytickets_technician.php">MYSYDE IT Consulting Group</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -102,15 +108,11 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="mytickets.php"><i class="fa fa-archive fa-fw"></i> My Tickets</a>
+                            <a href="mytickets_technician.php"><i class="fa fa-archive fa-fw"></i> My Tickets</a>
                         </li>
                         <li>
-                            <a href="createticket.php"><i class="fa fa-ticket fa-fw"></i> Create Ticket</a>
+                            <a href="faq_technician.php"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
                         </li>
-                        <li>
-                            <a href="faq_client.php"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
-                        </li>
-
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -121,46 +123,32 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Create Ticket</h1>
+                    <h1 class="page-header">My Tickets</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="alert alert-danger" style="display:none;"></div>
-                    <form role="form" id="createTicket">
-                        <div class="form-group">
-                            <label>Ticket Subject</label>
-                            <input name="subject" class="form-control" placeholder="Enter text">
-                        </div>
-                        <div class="form-group">
-                            <label>Ticket Type</label>
-                            <select name="type" class="form-control">
-                                <option>Domain Access Issue</option>
-                                <option>Hardware Required</option>
-                                <option>Request for Software</option>
-                                <option>Server Support</option>
-                                <option>Software Issue</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Description</label>
-                            <textarea name="desc" class="form-control" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Priority</label>
-                            <select name="priority" class="form-control">
-                                <option>1 - Critical</option>
-                                <option>2 - High</option>
-                                <option>3 - Medium</option>
-                                <option selected="selected">4 - Low</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit Button</button>
-                        <button type="reset" class="btn btn-default">Reset Button</button>
-                    </form>
+                <div class="alert alert-danger" style="display:none;"></div>
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>Type</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th>Technician Assigned</th>
+                                <th>Date Created</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
+                <!-- /.table-responsive -->
             </div>
         </div>
         <!-- /#page-wrapper -->
@@ -178,12 +166,12 @@
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- DataTables JavaScript -->
-    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../bower_components/datatables/media/js/jquery.datatables.min.js"></script>
     <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-    <script src="../js/createticket.js"></script>
+    <script src="../js/mytickets.js"></script>
 
 </body>
 

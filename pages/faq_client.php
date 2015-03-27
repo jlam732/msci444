@@ -45,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">MYSYDE IT Consulting Group</a>
+                <a class="navbar-brand" href="mytickets.php">MYSYDE IT Consulting Group</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -94,16 +94,16 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="mytickets.php"><i class="fa fa-archive fa-fw"></i> My Tickets</a>
+                        </li>
+                        <li>
+                            <a href="createticket.php"><i class="fa fa-ticket fa-fw"></i> Create Ticket</a>
+                        </li>
+                        <li>
+                            <a href="faq_client.php"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
+                        </li>
 
-                        <li>
-                            <a href="mytickets.php"><i class="fa fa-dashboard fa-fw"></i> My Tickets</a>
-                        </li>
-                        <li>
-                            <a href="createticket.php"><i class="fa fa-table fa-fw"></i> Create Ticket</a>
-                        </li>
-                        <li>
-                            <a href="faq.php"><i class="fa fa-edit fa-fw"></i> FAQ</a>
-                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

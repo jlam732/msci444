@@ -57,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">MYSYDE IT Consulting Group</a>
+                <a class="navbar-brand" href="mytickets.php">MYSYDE IT Consulting Group</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -114,7 +114,7 @@
                             <a href="createticket.php"><i class="fa fa-ticket fa-fw"></i> Create Ticket</a>
                         </li>
                         <li>
-                            <a href="faq.php"><i class="fa fa-edit fa-fw"></i> FAQ</a>
+                            <a href="faq_client.php"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
                         </li>
                     </ul>
                 </div>
