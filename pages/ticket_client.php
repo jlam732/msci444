@@ -10,7 +10,7 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         //get the ticket info
-        $sql = "SELECT t.id, t.type, t.subject, t.description, t.status, t.priority, u.first_name, u.last_name, t.creationDate FROM ticket t LEFT JOIN user u "
+        $sql = "SELECT t.id, t.type, t.subject, t.description, t.status, t.priority, t.technician, u.first_name, u.last_name, t.creationDate FROM ticket t LEFT JOIN user u "
              . "ON t.technician = u.id "
              . "WHERE t.id ='" . $_GET["id"] . "'";
         $result = $conn->query($sql);
@@ -212,6 +212,17 @@
                                 <option <?php echo substr($ticket[0]["priority"],0,1) == "4" ? "selected='selected'" : ""; ?>>4 - Low</option>
                                 <?php } else { ?>
                                 <option><?php echo $ticket[0]["priority"]; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Assigned Technician</label>
+                            <select name="technician" class="form-control">
+                                <?php if($_SESSION["type"] != 1) {
+                                    foreach (assignees as $index => $assignee) { ?>
+                                        <option value="<?php echo $assignee['id'] ?>" <?php echo $ticket[0]["technician"] == $assignee["id"] ? "selected='selected'" : "" ?>> <?php echo $assignee["first_name"] . " " . $assignee["last_name"]; ?></option>                                
+                                <?php } } else { ?>
+                                <option value="<?php echo $ticket[0]['technician']"><?php echo $ticket[0]["first_name"] . " " . $ticket[0]["last_name"]; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
