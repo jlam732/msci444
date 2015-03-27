@@ -136,11 +136,11 @@
                         <div class="form-group">
                             <label>Ticket Type</label>
                             <select name="type" class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                                <option>Domain Access Issue</option>
+                                <option>Hardware Required</option>
+                                <option>Request for Software</option>
+                                <option>Server Support</option>
+                                <option>Software Issue</option>
                             </select>
                         </div>
                         <div class="form-group">
