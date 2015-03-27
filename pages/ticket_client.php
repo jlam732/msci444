@@ -1,3 +1,39 @@
+<?php
+    session_start();
+    include_once "../php/creds.php";
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        //get the ticket info
+        $sql = "SELECT t.id, t.type, t.subject, t.description, t.status, t.priority, u.first_name, u.last_name, t.creationDate FROM ticket t LEFT JOIN user u "
+             . "ON t.technician = u.id "
+             . "WHERE t.id ='" . $_GET["id"] . "'";
+        $result = $conn->query($sql);
+        $ticket = $result->fetchAll(PDO::FETCH_ASSOC);
+
+        //get all activity for related ticket
+        $sql = "SELECT a.id, a.name, a.description, a.creationDate FROM activity a "
+             . "WHERE a.ticket_id ='" . $_GET["id"] . "' ORDER BY a.creationDate asc";
+        $result = $conn->query($sql);
+        $activities = $result->fetchAll(PDO::FETCH_ASSOC);
+        
+        //if it's the technician, then we need to be able to assign the ticket to other technicians or manager
+        //so we need that info
+        $assignees = [];
+        if($_SESSION["type"] != 1) {
+            $sql = "SELECT u.id, u.first_name, u.last_name FROM user u "
+             . "WHERE u.type != 1 ORDER BY u.type asc, u.first_name asc";
+            $result = $conn->query($sql);
+            $activities = $result->fetchAll(PDO::FETCH_ASSOC);    
+        }
+        $conn->close();
+    } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = null;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,12 +59,6 @@
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- DataTables CSS -->
-    <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
-
-    <!-- DataTables Responsive CSS -->
-    <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
-    
     <!-- Morris Charts CSS -->
     <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
 
@@ -57,7 +87,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="mytickets.php">MYSYDE IT Consulting Group</a>
+                <a class="navbar-brand" href="mytickets.php">MSYDE IT Consulting Group</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -107,6 +137,7 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
+                        <?php if($_SESSION["type"] == 1) { ?>
                         <li>
                             <a href="mytickets.php"><i class="fa fa-archive fa-fw"></i> My Tickets</a>
                         </li>
@@ -116,6 +147,14 @@
                         <li>
                             <a href="faq_client.php"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
                         </li>
+                        <?php } else if($_SESSION["type"] == 2) { ?>
+                        <li>
+                            <a href="mytickets_technician.php"><i class="fa fa-archive fa-fw"></i> My Tickets</a>
+                        </li>
+                        <li>
+                            <a href="faq_technician.php"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
+                        </li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -126,32 +165,46 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">My Tickets</h1>
+                    <h1 class="page-header">Edit Ticket</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="alert alert-danger" style="display:none;"></div>
-                <div class="dataTable_wrapper">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                        <thead>
-                            <tr>
-                                <th>Ticket ID</th>
-                                <th>Type</th>
-                                <th>Subject</th>
-                                <th>Description</th>
-                                <th>Status</th>
-                                <th>Priority</th>
-                                <th>Technician Assigned</th>
-                                <th>Date Created</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                <div class="col-lg-6">
+                    <div class="alert alert-danger" style="display:none;"></div>
+                    <form role="form" id="createTicket">
+                        <div class="form-group">
+                            <label>Ticket Subject</label>
+                            <input name="subject" class="form-control" placeholder="Enter text">
+                        </div>
+                        <div class="form-group">    
+                            <label>Ticket Type</label>
+                            <select name="type" class="form-control">
+                                <option>Domain Access Issue</option>
+                                <option>Hardware Required</option>
+                                <option>Request for Software</option>
+                                <option>Server Support</option>
+                                <option>Software Issue</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea name="desc" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Priority</label>
+                            <select name="priority" class="form-control">
+                                <option>1 - Critical</option>
+                                <option>2 - High</option>
+                                <option>3 - Medium</option>
+                                <option selected="selected">4 - Low</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit Button</button>
+                        <button type="reset" class="btn btn-default">Reset Button</button>
+                    </form>
                 </div>
-                <!-- /.table-responsive -->
             </div>
         </div>
         <!-- /#page-wrapper -->
@@ -174,7 +227,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-    <script src="../js/mytickets.js"></script>
+    <script src="../js/createticket.js"></script>
 
 </body>
 

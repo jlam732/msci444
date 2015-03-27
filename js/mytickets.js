@@ -16,16 +16,18 @@ $(document).ready(function() {
                         tr += "<td>" + ticket[key] + "</td>";
                     }
                 }
-
                 //make the button
-                alert(<?php session_start(); echo $_SESSION["id"]; ?>);
+                tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button></td>';
                 dataTable.append(tr + "</tr>");
             }
             $('#dataTables-example').DataTable({
       	      responsive: true
     	    });
 
-
+            $('.editTicket').click(function() {
+                var ticket_id = $(this).data("id");
+                window.location.href = "ticket_client.php?id=" + ticket_id;
+            });
         },
         error: function(error) {
             console.log(error);
