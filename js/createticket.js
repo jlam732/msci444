@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("form").submit(function() {
+    $("#createTicket").submit(function() {
         //try to serialize the form
         var data = $("#createTicket").serializeArray();
         event.preventDefault();
