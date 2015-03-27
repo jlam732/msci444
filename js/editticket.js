@@ -9,7 +9,7 @@ $(document).ready(function() {
             return false;
         }
         for(var i = 0; i < data.length; i++) {
-            if(data[i] === "priority") {
+            if(data[i].name === "priority") {
                 data[i].value = data[i].value.slice(0,1);
             }
         }
