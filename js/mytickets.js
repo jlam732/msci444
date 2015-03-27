@@ -17,7 +17,7 @@ $(document).ready(function() {
                     }
                 }
                 //make the button
-                tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button></td>';
+                tr += '<button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button>';
                 dataTable.append(tr + "</tr>");
             }
             $('#dataTables-example').DataTable({
