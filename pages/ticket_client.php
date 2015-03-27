@@ -22,12 +22,11 @@
         $activities = $result->fetchAll(PDO::FETCH_ASSOC);
         //if it's the technician, then we need to be able to assign the ticket to other technicians or manager
         //so we need that info
-        $assignees = [];
         if($_SESSION["type"] != 1) {
             $sql = "SELECT u.id, u.first_name, u.last_name FROM user u "
              . "WHERE u.type != 1 ORDER BY u.type asc, u.first_name asc";
             $result = $conn->query($sql);
-            $activities = $result->fetchAll(PDO::FETCH_ASSOC);    
+            $assignees = $result->fetchAll(PDO::FETCH_ASSOC);    
         }
         //$conn->close();
     } catch(PDOException $e) {
@@ -219,10 +218,10 @@
                             <label>Assigned Technician</label>
                             <select name="technician" class="form-control">
                                 <?php if($_SESSION["type"] != 1) {
-                                    foreach (assignees as $index => $assignee) { ?>
-                                        <option value="<?php echo $assignee['id'] ?>" <?php echo $ticket[0]["technician"] == $assignee["id"] ? "selected='selected'" : "" ?>> <?php echo $assignee["first_name"] . " " . $assignee["last_name"]; ?></option>                                
+                                    foreach ($assignees as $index => $assignee) { ?>
+					<option value="<?php echo $assignee['id'] ?>" <?php echo $ticket[0]["technician"] == $assignee["id"] ? "selected='selected'" : "" ?>> <?php echo $assignee["first_name"] . " " . $assignee["last_name"]; ?></option>
                                 <?php } } else { ?>
-                                <option value="<?php echo $ticket[0]['technician']?>" <?php echo $ticket[0]["first_name"] . " " . $ticket[0]["last_name"]; ?></option>
+                                <option value="<?php echo $ticket[0]['technician']?>"><?php echo $ticket[0]["first_name"] . " " . $ticket[0]["last_name"]; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
