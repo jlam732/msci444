@@ -222,7 +222,7 @@
                                     foreach (assignees as $index => $assignee) { ?>
                                         <option value="<?php echo $assignee['id'] ?>" <?php echo $ticket[0]["technician"] == $assignee["id"] ? "selected='selected'" : "" ?>> <?php echo $assignee["first_name"] . " " . $assignee["last_name"]; ?></option>                                
                                 <?php } } else { ?>
-                                <option value="<?php echo $ticket[0]['technician']"><?php echo $ticket[0]["first_name"] . " " . $ticket[0]["last_name"]; ?></option>
+                                <option value="<?php echo $ticket[0]['technician']?>" <?php echo $ticket[0]["first_name"] . " " . $ticket[0]["last_name"]; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
