@@ -13,11 +13,14 @@ $(document).ready(function() {
                 var tr = "<tr " + (index % 2 == 0 ? 'class="odd">' : 'class="even">');
                 for (var key in ticket) {
                     if (ticket.hasOwnProperty(key)) {
-                        tr += "<td>" + ticket[key] + "</td>";
+                        if(key == "id") {
+                            tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button>' + ticket[key] + "</td>";
+                        } else {
+                            tr += "<td>" + ticket[key] + "</td>";
+                        }
                     }
                 }
                 //make the button
-                tr += '<button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button>';
                 dataTable.append(tr + "</tr>");
             }
             $('#dataTables-example').DataTable({
