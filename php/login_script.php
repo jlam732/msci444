@@ -25,7 +25,7 @@
 		    		echo json_encode("mytickets.php");
 		    		break;
 		    	case 2: //technician
-		    		echo json_encode("mytickets_tech.php");
+		    		echo json_encode("mytickets_technician.php");
 		    		break;
 		    	case 3: //manager
 		    		echo json_encode("mytickets_manager.php");
