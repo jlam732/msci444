@@ -8,8 +8,11 @@ $(document).ready(function() {
             console.log("something wrong with data");
             return false;
         }
-        //hack to change priority to a number
-        data[4].value = data[4].value.slice(0,1);
+        for(var i = 0; i < data.length; i++) {
+            if(data[i] === "priority") {
+                data[i].value = data[i].value.slice(0,1);
+            }
+        }
 
         console.log(data);
         return false;
