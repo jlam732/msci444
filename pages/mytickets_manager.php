@@ -104,7 +104,7 @@
                             <a href="mytickets_manager.php"><i class="fa fa-dashboard fa-fw"></i> My Tickets</a>
                         </li>
                         <li>
-                            <a href="mytickets_manager.php"><i class="fa fa-dashboard fa-fw"></i> My Tickets</a>
+                            <a href="mytickets_manager.php"><i class="fa fa-dashboard fa-fw"></i> My Reports</a>
                         </li>
                     </ul>
                 </div>
