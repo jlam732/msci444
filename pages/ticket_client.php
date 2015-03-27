@@ -183,29 +183,33 @@
                         <div class="form-group">    
                             <label>Ticket Type</label>
                             <select name="type" class="form-control">
-				<?php if($_SESSION["type"] != 1) { ?>
-				<option <?php echo substr($ticket[0]["type"],0,1) == "D" ? "selected='selected'" : "" ?>>Domain Access Issue</option>
+                				<?php if($_SESSION["type"] != 1) { ?>
+                				<option <?php echo substr($ticket[0]["type"],0,1) == "D" ? "selected='selected'" : "" ?>>Domain Access Issue</option>
                                 <option <?php echo substr($ticket[0]["type"],0,1) == "H" ? "selected='selected'" : "" ?>>Hardware Required</option>
                                 <option <?php echo substr($ticket[0]["type"],0,1) == "R" ? "selected='selected'" : ""; ?>>Request for Software</option>
                                 <option <?php echo substr($ticket[0]["type"],0,2) == "Se" ? "selected='selected'" : ""; ?>>Server Support</option>
                                 <option <?php echo substr($ticket[0]["type"],0,2) == "So" ? "selected='selected'" : ""; ?>>Software Issue</option>
 
-				<?php } else { ?>
-				<option><?php echo $ticket[0]["type"]; ?></option>
-				<?php } ?>
+                				<?php } else { ?>
+                				<option><?php echo $ticket[0]["type"]; ?></option>
+                				<?php } ?>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea name="desc" class="form-control" rows="3"></textarea>
+                            <textarea name="desc" class="form-control" rows="3"><?php echo $ticket[0]["description"]; ?></textarea>
                         </div>
                         <div class="form-group">
                             <label>Priority</label>
                             <select name="priority" class="form-control">
-                                <option>1 - Critical</option>
-                                <option>2 - High</option>
-                                <option>3 - Medium</option>
-                                <option selected="selected">4 - Low</option>
+                                <?php if($_SESSION["type"] != 1) { ?>
+                                <option <?php echo substr($ticket[0]["priority"],0,1) == "1" ? "selected='selected'" : "" ?>>1 - Critical</option>
+                                <option <?php echo substr($ticket[0]["priority"],0,1) == "2" ? "selected='selected'" : "" ?>>2 - High</option>
+                                <option <?php echo substr($ticket[0]["priority"],0,1) == "3" ? "selected='selected'" : ""; ?>>3 - Medium</option>
+                                <option <?php echo substr($ticket[0]["priority"],0,1) == "4" ? "selected='selected'" : ""; ?>>4 - Low</option>
+                                <?php } else { ?>
+                                <option><?php echo $ticket[0]["priority"]; ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-default">Submit Button</button>
