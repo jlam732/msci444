@@ -33,7 +33,6 @@
             echo $sql . "<br>" . $e->getMessage();
     }
     $conn = null;
-    echo var_dump($ticket);
 ?>
 <!DOCTYPE html>
 <html lang="en">
