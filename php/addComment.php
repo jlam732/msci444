@@ -11,7 +11,7 @@
 	    $query->execute(array($_POST["ticket_id"],$_POST["name"],$_POST["description"]));
 	    $id = $conn->lastInsertID();
         //now get the activity back
-        $sql = "SELECT * FROM activity WHERE id ='" . $id "'";
+        $sql = "SELECT name, description, creationDate FROM activity WHERE id ='" . $id . "'";
         $result = $conn->query($sql);
         $activity = $result->fetchAll(PDO::FETCH_ASSOC);
         echo json_encode($activity);
