@@ -4,7 +4,8 @@ $(document).ready(function() {
         type: 'get',
         success: function(data) {
         //put the tickets dynamically in the table using foreach
-        var tickets = JSON.parse(data);
+            var tickets = JSON.parse(data);
+            console.log(tickets);
             var dataTable = $('#dataTables-example tbody');
             for(var index = 0; index < tickets.length; index++) {
                 var ticket = tickets[index];

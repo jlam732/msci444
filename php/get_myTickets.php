@@ -16,8 +16,8 @@
                          . "ON t.creator = u.id "
                          . "WHERE technician ='" . $_SESSION["id"] . "' ORDER BY t.id asc";
             } else if($_SESSION["type"] == 3) {
-                $sql = "SELECT t.id, t.type, t.subject, t.description, t.status, t.priority, u.first_name, u.last_name, t.creationDate FROM ticket t INNER JOIN user u "
-                         . "ON t.creator = u.id ORDER BY t.id asc";
+                $sql = "SELECT t.id, t.type, t.subject, t.description, t.status, t.priority, u.first_name, u.last_name, u2.first_name, u2.last_name, t.creationDate " 
+                     . "FROM ticket t INNER JOIN user u ON t.creator = u.id INNER JOIN user u2 ON t.technician = u2.id ORDER BY t.id asc";
             }
             $result = $conn->query($sql);
             $tickets = $result->fetchAll(PDO::FETCH_ASSOC);
