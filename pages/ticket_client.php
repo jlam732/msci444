@@ -262,7 +262,7 @@
                             <div class="col-sm-5">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <strong class="activity-name"><?php echo $activity["name"]; ?></strong> <span class="text-muted activity-time">commented <?php echo $activity["createdDate"]; ?></span>
+                                        <strong class="activity-name"><?php echo $activity["name"]; ?></strong> <span class="text-muted activity-time">commented <?php echo $activity["creationDate"]; ?></span>
                                     </div>
                                     <div class="panel-body activity-desc">
                                         <?php echo $activity["description"]; ?>

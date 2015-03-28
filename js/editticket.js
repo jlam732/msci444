@@ -45,13 +45,14 @@ $(document).ready(function() {
             data: data, 
             success: function(activity) {
                 //put the comment into the thing
-                console.log(activity);
                 var comment = $('.comment:last').clone();
-                comment = comment.find('.activity-name').html(activity['name']);
-                comment = comment.find('.activity-time').html('commented on ' + activity['createdDate']);
-                comment = comment.find('.activity-name').html(activity['description']);
+                comment = comment.find('.activity-name').html(activity[0]['name']);
+                comment = comment.find('.activity-time').html('commented on ' + activity[0]['createdDate']);
+                comment = comment.find('.activity-name').html(activity[0]['description']);
                 comment.insertAfter('.comment:last');
-                // add a new add comment part
+                // clear the add comment form
+                $('#addComment textarea').val("");
+
             },
             error: function(error) {
                 console.log(error);
