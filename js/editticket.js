@@ -50,7 +50,7 @@ $(document).ready(function() {
                 $('.activity-name', $comment).html(activity[0]['name']);
                 $('.activity-time', $comment).html('commented on ' + activity[0]['createdDate']);
                 $('.activity-desc', $comment).html(activity[0]['description']);
-                $comment.appendTo('.comment:last');
+                $comment.insertAfter('.comment:last');
                 // clear the add comment form
                 $('#addComment textarea').val("");
 
