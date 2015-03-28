@@ -43,9 +43,9 @@ $(document).ready(function() {
             type: "POST",
             url: "../php/addComment.php",
             data: data, 
-            success: function(activity) {
+            success: function(result) {
                 //put the comment into the thing
-                console.log(activity[0]);
+                var activity = JSON.parse(result);
                 $comment = $('.comment:last').clone();
                 $('.activity-name', $comment).html(activity[0]['name']);
                 $('.activity-time', $comment).html('commented on ' + activity[0]['creationDate']);
