@@ -244,16 +244,37 @@
                         <button type="reset" class="btn btn-default">Reset Button</button>
                     </form>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="container">
-                    <div class="row">
+                <div class="clear">&nbsp;</div>
+                <div class="col-lg-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Comments</h3>
+                            </div><!-- /col-sm-12 -->
+                        </div><!-- /row -->
+                        <?php foreach ($activities as $index => $activity) { ?>
+                            <div class="row comment">
+                                <div class="col-sm-1">
+                                    <div class="thumbnail">
+                                        <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                    </div><!-- /thumbnail -->
+                                </div><!-- /col-sm-1 -->
+                                <div class="col-sm-5">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <strong><?php echo $activity["name"]; ?></strong> <span class="text-muted">commented <?php echo $activity["createdDate"]; ?></span>
+                                        </div>
+                                        <div class="panel-body">
+                                            <?php echo $activity["description"]; ?>
+                                        </div><!-- /panel-body -->
+                                    </div><!-- /panel panel-default -->
+                                </div><!-- /col-sm-5 -->
+                            </div><!-- /row -->
+                        <?php } ?>
                         <div class="col-sm-12">
-                            <h3>Comments</h3>
-                        </div><!-- /col-sm-12 -->
-                    </div><!-- /row -->
-                    <?php foreach ($activities as $index => $activity) { ?>
-                        <div class="row comment">
+                            <h4>Add a comment:</h4>
+                        </div>
+                        <div class="row">
                             <div class="col-sm-1">
                                 <div class="thumbnail">
                                     <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
@@ -262,45 +283,25 @@
                             <div class="col-sm-5">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <strong><?php echo $activity["name"]; ?></strong> <span class="text-muted">commented <?php echo $activity["createdDate"]; ?></span>
+                                        <strong><?php echo $activity["name"]; ?></strong>
                                     </div>
                                     <div class="panel-body">
-                                        <?php echo $activity["description"]; ?>
+                                        <form role="form" id="addComment">
+                                            <div class="form-group" style="display:none;">
+                                                <input name="name" class="form-control" value="<?php echo $_SESSION['first_name'] . ' ' . $_SESSION['last_name']; ?>">
+                                                <input name="ticket_id" class="form-control" value="<?php echo $ticket[0]['id']; ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea name="description" class="form-control" rows="3"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-default">Add Comment</button>
+                                        </form>
                                     </div><!-- /panel-body -->
                                 </div><!-- /panel panel-default -->
                             </div><!-- /col-sm-5 -->
                         </div><!-- /row -->
-                    <?php } ?>
-                    <div class="col-sm-12">
-                        <h4>Add a comment:</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-1">
-                            <div class="thumbnail">
-                                <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                            </div><!-- /thumbnail -->
-                        </div><!-- /col-sm-1 -->
-                        <div class="col-sm-5">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <strong><?php echo $activity["name"]; ?></strong>
-                                </div>
-                                <div class="panel-body">
-                                    <form role="form" id="addComment">
-                                        <div class="form-group" style="display:none;">
-                                            <input name="name" class="form-control" value="<?php echo $_SESSION['first_name'] . ' ' . $_SESSION['last_name']; ?>">
-                                            <input name="ticket_id" class="form-control" value="<?php echo $ticket[0]['id']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea name="description" class="form-control" rows="3"></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-default">Add Comment</button>
-                                    </form>
-                                </div><!-- /panel-body -->
-                            </div><!-- /panel panel-default -->
-                        </div><!-- /col-sm-5 -->
-                    </div><!-- /row -->
-                </div><!-- /container -->
+                    </div><!-- /container -->
+                </div>
             </div>
         </div>
         <!-- /#page-wrapper -->
