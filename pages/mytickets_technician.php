@@ -123,6 +123,39 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
+                    <h1 class="page-header">Open Tickets</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="alert alert-danger" style="display:none;"></div>
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example2">
+                        <thead>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>Type</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th>Creator</th>
+                                <th>Date Created</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
                     <h1 class="page-header">My Tickets</h1>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -140,7 +173,7 @@
                                 <th>Description</th>
                                 <th>Status</th>
                                 <th>Priority</th>
-                                <th>Technician Assigned</th>
+                                <th>Creator</th>
                                 <th>Date Created</th>
                             </tr>
                         </thead>
@@ -152,6 +185,7 @@
             </div>
         </div>
         <!-- /#page-wrapper -->
+
 
     </div>
     <!-- /#wrapper -->
@@ -171,7 +205,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-    <script src="../js/mytickets.js"></script>
+    <script src="../js/mytickets_technician.js"></script>
 
 </body>
 
