@@ -48,7 +48,7 @@ $(document).ready(function() {
                 console.log(activity);
                 $comment = $('.comment:last').clone();
                 $('.activity-name', $comment).html(activity[0]['name']);
-                $('.activity-time', $comment).html('commented on ' + activity[0]['createdDate']);
+                $('.activity-time', $comment).html('commented on ' + activity[0]['creationDate']);
                 $('.activity-desc', $comment).html(activity[0]['description']);
                 $comment.insertAfter('.comment:last');
                 // clear the add comment form
