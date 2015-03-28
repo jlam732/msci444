@@ -45,7 +45,7 @@ $(document).ready(function() {
             data: data, 
             success: function(activity) {
                 //put the comment into the thing
-                console.log(activity);
+                console.log(activity[0]);
                 $comment = $('.comment:last').clone();
                 $('.activity-name', $comment).html(activity[0]['name']);
                 $('.activity-time', $comment).html('commented on ' + activity[0]['creationDate']);
