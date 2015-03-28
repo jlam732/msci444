@@ -45,11 +45,12 @@ $(document).ready(function() {
             data: data, 
             success: function(activity) {
                 //put the comment into the thing
-                var comment = $('.comment:last').clone();
-                comment = comment.find('.activity-name').html(activity[0]['name']);
-                comment = comment.find('.activity-time').html('commented on ' + activity[0]['createdDate']);
-                comment = comment.find('.activity-name').html(activity[0]['description']);
-                comment.insertAfter('.comment:last');
+                console.log(activity);
+                $comment = $('.comment:last').clone();
+                $('.activity-name', $comment).html(activity[0]['name']);
+                $('.activity-time', $comment).html('commented on ' + activity[0]['createdDate']);
+                $('.activity-desc', $comment).html(activity[0]['description']);
+                $comment.appendTo('.comment:last');
                 // clear the add comment form
                 $('#addComment textarea').val("");
 
