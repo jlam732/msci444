@@ -12,6 +12,9 @@ $(document).ready(function() {
                 ticket["first_name"] += " " + ticket["last_name"];
                 delete ticket["last_name"];
                 if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
+                ticket["tech_first"] += " " + ticket["tech_last"];
+                delete ticket["tech_last"];
+                if(ticket["tech_first"] == "null null") { ticket["tech_first"] = ""; }
                 var tr = "<tr " + (index % 2 == 0 ? 'class="odd">' : 'class="even">');
                 for (var key in ticket) {
                     if (ticket.hasOwnProperty(key)) {

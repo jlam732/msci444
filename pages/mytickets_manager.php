@@ -136,6 +136,7 @@
                                             <th>Description</th>
                                             <th>Status</th>
                                             <th>Priority</th>
+                                            <th>Creator</th>
                                             <th>Technician Assigned</th>
                                             <th>Date Created</th>                                            
                                         </tr>
