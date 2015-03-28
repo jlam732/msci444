@@ -57,10 +57,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="mytickets_technician.php">MYSYDE IT Consulting Group</a>
+                <a class="navbar-brand" href="mytickets_manager.php">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
-
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
                 <li class="dropdown">
@@ -103,21 +102,19 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-
+            
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="mytickets_technician.php"><i class="fa fa-archive fa-fw"></i> My Tickets</a>
+                            <a href="mytickets_manager.php"><i class="fa fa-ticket fa-fw"></i> My Tickets</a>
                         </li>
                         <li>
-                            <a href="faq_technician.php"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
+                            <a href="myreports.php"><i class="fa fa-bar-chart fa-fw"></i> My Reports</a>
                         </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
         </nav>
 
         <div id="page-wrapper">
@@ -152,41 +149,6 @@
             </div>
         </div>
         <!-- /#page-wrapper -->
-
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">My Tickets</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="alert alert-danger" style="display:none;"></div>
-                <div class="dataTable_wrapper">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                        <thead>
-                            <tr>
-                                <th>Ticket ID</th>
-                                <th>Type</th>
-                                <th>Subject</th>
-                                <th>Description</th>
-                                <th>Status</th>
-                                <th>Priority</th>
-                                <th>Creator</th>
-                                <th>Date Created</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.table-responsive -->
-            </div>
-        </div>
-        <!-- /#page-wrapper -->
-
-
     </div>
     <!-- /#wrapper -->
 
