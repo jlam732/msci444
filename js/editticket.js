@@ -48,7 +48,7 @@ $(document).ready(function() {
                 var activity = JSON.parse(result);
                 $comment = $('.comment:last').clone();
                 if (($comment).length == 0) {
-                    $comment = $(".test_comment").clone().removeClass('.test_comment');
+                    $comment = $(".test_comment").clone().removeClass('test_comment');
                 }
                 $('.activity-name', $comment).html(activity[0]['name']);
                 $('.activity-time', $comment).html('commented on ' + activity[0]['creationDate']);
