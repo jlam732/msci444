@@ -8,7 +8,7 @@
             $sql = "";
             session_start();
             $sql = "SELECT t.id, t.type, t.subject, t.description, t.status, t.priority, u.first_name, u.last_name, t.creationDate FROM ticket t INNER JOIN user u "
-                     . "ON t.creator = u.id WHERE t.status = 'Open' ORDER BY t.id asc";
+                     . "ON t.creator = u.id WHERE t.status = 'Open' AND t.technician IS NULL ORDER BY t.id asc";
             $result = $conn->query($sql);
             $tickets = $result->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode($tickets);
