@@ -17,7 +17,7 @@ $(document).ready(function() {
                         if(key == "id") {
                             tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button>' + ticket[key] + "</td>";
                         } else {
-                            tr += "<td>" + ticket[key] + "</td>";
+                            tr += "<td>" + (ticket[key] == null ? "" : ticket[key]) + "</td>";
                         }
                     }
                 }
