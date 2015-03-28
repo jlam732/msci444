@@ -10,7 +10,7 @@ $(document).ready(function() {
         		var ticket = tickets[index];
         		ticket["first_name"] += " " + ticket["last_name"];
         		delete ticket["last_name"];
-                if(ticket["first_name"] == null) { ticket[first_name] = ""; }
+                if(ticket["first_name"] == "null null") { ticket[first_name] = ""; }
                 var tr = "<tr " + (index % 2 == 0 ? 'class="odd">' : 'class="even">');
                 for (var key in ticket) {
                     if (ticket.hasOwnProperty(key)) {
