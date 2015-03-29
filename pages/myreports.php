@@ -124,29 +124,8 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="alert alert-danger" style="display:none;"></div>
-                <div class="dataTable_wrapper">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example2">
-                        <thead>
-                            <tr>
-                                <th>Ticket ID</th>
-                                <th>Type</th>
-                                <th>Subject</th>
-                                <th>Description</th>
-                                <th>Status</th>
-                                <th>Priority</th>
-                                <th>Creator</th>
-                                <th>Date Created</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.table-responsive -->
-            </div>
+            <button type="submit" class="btn btn-default">Technician Report</button>
+            <button type="reset" class="btn btn-default">Ticket Report</button>
         </div>
         <!-- /#page-wrapper -->
     </div>
