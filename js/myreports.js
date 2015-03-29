@@ -18,6 +18,6 @@ $(document).ready(function() {
         error: function(error) {
             console.log(error);
             $('.alert').text(error.responseText).show();
-        }
+        };
     });
 });
