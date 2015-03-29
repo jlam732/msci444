@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: '../pages/myreports.php',
+        url: '../php/get_myReports.php',
         type: 'get',
         success: function(data){
             var tickets=JSON.parse(data);
