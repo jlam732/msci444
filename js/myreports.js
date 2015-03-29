@@ -6,7 +6,7 @@ $(document).ready(function() {
             var tickets=JSON.parse(data);
 
             $("#techrept").click(function(){
-                document.write("what up");
+                console.log("what up");
             });
             $("#tickrept").click(function(){
 
