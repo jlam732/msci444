@@ -7,7 +7,7 @@ $(document).ready(function() {
 
             $("#techrept").click(function(){
                 console.log("lasjkf");
-                echo closedTicket;
+                document.write(closedTicket);
             });
 
             $("#tickrept").click(function(){
