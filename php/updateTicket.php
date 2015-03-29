@@ -1,4 +1,5 @@
 <?php
+	//get the info to update the ticket, and if a ticket updates, return true/false
         include_once "creds.php";
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

@@ -1,4 +1,5 @@
 <?php
+	//Goal: create the ticket, return the ticket id to the user
         include_once "creds.php";
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

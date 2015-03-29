@@ -1,4 +1,5 @@
 <?php
+	//only technician uses this, look for all open tickets
         include_once "creds.php";
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

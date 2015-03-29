@@ -1,4 +1,5 @@
 <?php
+	//Goal: put the activity into DB, then get it back to put it onto the screen
         include_once "creds.php";
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

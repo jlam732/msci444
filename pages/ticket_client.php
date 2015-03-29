@@ -1,4 +1,6 @@
 <?php
+    //get the current ticket being edited, all the activities for that ticket
+    //also, if it's a technician or manager, get the list of technicians to populate a dropdown
     session_start();
     include_once "../php/creds.php";
     $ticket = [];
