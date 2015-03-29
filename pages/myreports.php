@@ -14,7 +14,7 @@
              . "on user.id = ticket.technician WHERE user.type=2 AND ticket.status='Closed' GROUP BY ticket.technician";
         $result = $conn->query($sql);
         $closedTicket = $result->fetchAll(PDO::FETCH_ASSOC);
-
+        echo json_encode($closedTicket);
         //$conn->close();
     } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
