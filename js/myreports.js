@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: '../php/myreports.php',
+        url: '../pages/myreports.php',
         type: 'get',
         success: function(data){
             var closedTicket = JSON.parse(data);
