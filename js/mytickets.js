@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: '../pages/get_myTickets.php',
+        url: '../php/get_myTickets.php',
         type: 'get',
         success: function(data) {
 	    //put the tickets dynamically in the table using foreach
