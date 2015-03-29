@@ -10,8 +10,8 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         //get the ticket info
-        $sql = "SELECT user.first_name, user.last_name, COUNT(ticket.id) as tickets_closed FROM `ticket` left join `user` 
-        on user.id = ticket.technician WHERE user.type=2 AND ticket.status="Closed" GROUP BY ticket.technician";
+        $sql = "SELECT user.first_name, user.last_name, COUNT(ticket.id) as tickets_closed FROM ticket left join user " 
+             . "on user.id = ticket.technician WHERE user.type=2 AND ticket.status='Closed' GROUP BY ticket.technician";
         $result = $conn->query($sql);
         $closedTicket = $result->fetchAll(PDO::FETCH_ASSOC);
 
@@ -21,6 +21,7 @@
     }
     $conn = null;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
