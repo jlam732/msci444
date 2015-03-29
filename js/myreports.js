@@ -3,7 +3,7 @@ $(document).ready(function() {
         url: '../pages/myreports.php',
         type: 'get',
         success: function(data){
-            var closedTicket = JSON.parse(data);
+            var closedTicket=JSON.parse(data);
 
             $("#techrept").click(function(){
                 console.log("lasjkf");
