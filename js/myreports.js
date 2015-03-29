@@ -1,3 +1,10 @@
 $(document).ready(function() {
-    //add code here
+   	$("#techrept").click(function(){
+       console.log("sdfdsfds");
+       alert("fdgfgfdgfd"); 
+    });
+
+    $("#tickrept").click(function(){
+
+    });
 });

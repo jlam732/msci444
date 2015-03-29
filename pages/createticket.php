@@ -157,8 +157,8 @@
                                 <option selected="selected">4 - Low</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-default">Submit Button</button>
-                        <button type="reset" class="btn btn-default">Reset Button</button>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
                     </form>
                 </div>
             </div>
