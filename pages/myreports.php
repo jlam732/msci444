@@ -15,6 +15,7 @@
         $result = $conn->query($sql);
         $closedTicket = $result->fetchAll(PDO::FETCH_ASSOC);
         echo json_encode($closedTicket);
+        echo ("What up?");
         //$conn->close();
     } catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
