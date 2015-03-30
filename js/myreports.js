@@ -4,13 +4,49 @@ $(document).ready(function() {
         type: 'get',
         success: function(data){
             var tickets=JSON.parse(data);
+            var dataTable = $('#dataTables-example tbody');
+            for (i=0;i<tickets.length;i++)
+            {
+                var ticket = tickets[index];
+                ticket["first_name"] += " " + ticket["last_name"];
+                delete ticket["last_name"];
 
+                if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
+            }
             $("#techrept").click(function(){
-                console.log(tickets);
-            });
+                dataTable.append('<div id="page-wrapper">
+                    <div class="row">
+                    <div class="col-lg-12">
+                    <h1 class="page-header">Technician Report</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                    <div class="alert alert-danger" style="display:none;"></div>
+                    <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <thead>
+                    <tr>
+                    <th>Name: </th>' + ticket["first_name"] + '
+                    <th>Number of Tickets closed: </th>' + ticket["tickets_closed"] + '
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                    </div>
+                    </div>')
+});
             $("#tickrept").click(function(){
 
             });
+
+            $('#dataTables-example').DataTable({
+               responsive: true,
+           });
         },
         error: function(error){
             console.log(error);
