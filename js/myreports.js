@@ -9,6 +9,7 @@ $(document).ready(function() {
             $("#techrept").click(function(){
                 var thead = ('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>');
                 var tr = '<thead><th><tr>';
+                var percent = new Array(tickets.length);
                 count=0;
                 for (i=0;i<tickets.length;i++)
                 {
