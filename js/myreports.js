@@ -14,14 +14,7 @@ $(document).ready(function() {
                 if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
             }
             $("#techrept").click(function(){
-                dataTable.append('
-                    <thead>
-                    <tr>
-                    <th>' + ticket["first_name"] + '</th>
-                    <th>' + ticket["tickets_closed"] + '</th>
-                    </tr>
-                    </thead>
-                    ')
+                dataTable.append('<thead><tr><th>' + ticket["first_name"] + '</th><th>' + ticket["tickets_closed"] + '</th></tr></thead>')
             });
             $("#tickrept").click(function(){
 
