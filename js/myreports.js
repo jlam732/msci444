@@ -50,7 +50,7 @@ $(document).ready(function() {
                 for(var index = 0; index < dates.ticketDate.length; index++) {
                     var date = dates.ticketDate[index];
                     
-                    tr+='<tr><td>' + date["creationDate"] + '</td><td>' + date["id"] + '</td></tr>';
+                    tr+='<tr><td>' + date["Date(creationDate)"] + '</td><td>' + date["count(id)"] + '</td></tr>';
                 }
         tbody.append(tr);
         if(!flag) {
