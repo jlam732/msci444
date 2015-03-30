@@ -25,8 +25,8 @@ $(document).ready(function() {
                 dataTable.append(tr + "</tr>");
             }
             $('#dataTables-example').DataTable({
-               responsive: true,
-           });
+             responsive: true,
+         });
 
             $('.editTicket').click(function() {
                 var ticket_id = $(this).data("id");
