@@ -9,7 +9,7 @@ $(document).ready(function() {
             url: '../php/get_myReports.php',
             type: 'get',
             success: function(data){
-                var tickets = JSON.parse(data);
+                var [tickets, dates] = JSON.parse(data);
                 thead.append("<tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr>");
 		tr = "";
                 for(var index = 0; index < tickets.length; index++) {
@@ -26,6 +26,38 @@ $(document).ready(function() {
                 		 responsive: true,
 	                });
 		}
+            },
+            error: function(error){
+                console.log(error);
+                $('.alert').text(error.responseText).show();
+            }
+        });
+    });
+
+    $("#tickrept").click(function(){
+        var thead = $('#technicianTable thead');
+        var tbody = $('#technicianTable tbody');
+    thead.empty();
+    tbody.empty();
+    $.ajax({
+            url: '../php/get_myReports.php',
+            type: 'get',
+            success: function(data){
+                var [tickets, dates] = JSON.parse(data);
+                thead.append("<tr><th>Date</th><th>Number of Tickets Created</th></tr>");
+        tr = "";
+                for(var index = 0; index < tickets.length; index++) {
+                    var date = dates[index];
+                    
+                    tr+='<tr><td>' + date["creationDate"] + '</td><td>' + date["id"] + '</td></tr>';
+                }
+        tbody.append(tr);
+        if(!flag) {
+            flag = true;
+                $('#technicianTable').DataTable({
+                         responsive: true,
+                    });
+        }
             },
             error: function(error){
                 console.log(error);
