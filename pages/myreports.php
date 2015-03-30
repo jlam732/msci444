@@ -56,7 +56,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="mytickets_manager.php">SB Admin v2.0</a>
+                <a class="navbar-brand" href="mytickets_manager.php">MYSYDE IT Consulting Group</a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
