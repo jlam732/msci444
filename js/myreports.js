@@ -17,9 +17,9 @@ $(document).ready(function() {
 
                     if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
 
-                    tr+='<td>' + ticket["first_name"] + '</td><td>' + ticket["tickets_closed"] + '</td></tr>';
+                    tr+='<td>' + ticket["first_name"] + '</td><th><td>' + ticket["tickets_closed"] + '</td></th></tr>';
                 }
-                tr+='</th></thead>';
+                tr+='</thead>';
                 dataTable.append(thead+tr);
                 console.log(tickets);
             });
