@@ -9,6 +9,19 @@ $(document).ready(function() {
             $("#techrept").click(function(){
                 var thead = ('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>');
                 var tr = '<thead><th><tr>';
+                count=0;
+                for (i=0;i<tickets.length;i++)
+                {
+                    ticket=tickets[i];
+                    count+=ticket["tickets_closed"];
+                }
+
+                for (i=0;i<tickets.length;i++)
+                {
+                    ticket=tickets[i];
+                    percent[i]=(ticket["tickets_closed"]/count)*100;
+                }
+
                 for (i=0;i<tickets.length;i++)
                 {
                     var ticket = tickets[i];
@@ -20,7 +33,21 @@ $(document).ready(function() {
                     tr+='<td>' + ticket["first_name"] + '</td><th><td>' + ticket["tickets_closed"] + '</td></th></tr>';
                 }
                 tr+='</thead>';
-                dataTable.append(thead+tr);
+
+                graph='<dl style="width: 300px">';
+
+                for (i=0;i<tickets.length;i++)
+                {
+                    var ticket = tickets[i];
+                    ticket["first_name"] += " " + ticket["last_name"];
+                    delete ticket["last_name"];
+
+                    if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
+                    
+                    graph+='<dt>'+ticket["first_name"]+'</dt><dd><div id="data-one" class="bar" style="width: '+percent[i]+'%">'+percent[i]+'%</div></dd>';
+                }
+                graph+='</dl>';
+                dataTable.append(thead+tr+graph);
                 console.log(tickets);
                 delete tickets;
             });
