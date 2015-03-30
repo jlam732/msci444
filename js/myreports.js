@@ -22,6 +22,7 @@ $(document).ready(function() {
                 tr+='</thead>';
                 dataTable.append(thead+tr);
                 console.log(tickets);
+                delete tickets;
             });
             $("#tickrept").click(function(){
 
