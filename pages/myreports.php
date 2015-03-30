@@ -131,12 +131,7 @@
                 <div class="alert alert-danger" style="display:none;"></div>
                 <div class="dataTable_wrapper">
                     <table class="table table-striped table-bordered table-hover" id="technicianTable">
-                        <thead>
-                            <tr>
-                                <th>Name of Technician</th>
-                                <th>Number of Closed Tickets</th>
-                            </tr>
-                        </thead>
+                        
                         <tbody>
                         </tbody>
                     </table>

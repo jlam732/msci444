@@ -14,11 +14,12 @@ $(document).ready(function() {
                 if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
             }
             $("#techrept").click(function(){
+                dataTable.append('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>')
                 for (i=0;i<tickets.length;i++)
                 {
                     dataTable.append('<thead><tr><th>' + ticket["first_name"] + '</th><th>' + ticket["tickets_closed"] + '</th></tr></thead>')
                 }
-                console.log(ticket);
+                console.log(tickets);
             });
             $("#tickrept").click(function(){
 
