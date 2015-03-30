@@ -10,18 +10,6 @@ $(document).ready(function() {
                 var thead = ('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>');
                 var tr = '<thead><th><tr>';
                 var percent = new Array(tickets.length);
-                
-
-
-                var prm = Sys.WebForms.PageRequestManager.getInstance();
-                prm.add_InitializeRequest(abortPostbacks);
-
-                function abortPostbacks(sender, args) {
-                    if (prm.isInAsyncPostBack)
-                    args.set_cancel(true);
-                }
-
-
 
                 count=0;
                 for (i=0;i<tickets.length;i++)
@@ -50,6 +38,18 @@ $(document).ready(function() {
                 tr+='</thead>';
                 dataTable.append(thead+tr);
                 console.log(tickets);
+
+
+
+
+                var prm = Sys.WebForms.PageRequestManager.getInstance();
+                prm.add_InitializeRequest(abortPostbacks);
+
+                function abortPostbacks(sender, args) {
+                    if (prm.isInAsyncPostBack)
+                    args.set_cancel(true);
+                }
+
 
             });
             $("#tickrept").click(function(){
