@@ -10,7 +10,6 @@ $(document).ready(function() {
             type: 'get',
             success: function(data){
                 var tickets = JSON.parse(data);
-                console.log(tickets.closedTicket[1]);
                 thead.append("<tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr>");
 		tr = "";
                 for(var index = 0; index < tickets.closedTicket.length; index++) {
@@ -44,7 +43,8 @@ $(document).ready(function() {
             url: '../php/get_myReports.php',
             type: 'get',
             success: function(data){
-                var dates = JSON.parse(data);
+                var dates = JSON.parse(data);                
+                console.log(dates.ticketDate[1]);
                 thead.append("<tr><th>Date</th><th>Number of Tickets Created</th></tr>");
         tr = "";
                 for(var index = 0; index < dates.ticketDate.length; index++) {
