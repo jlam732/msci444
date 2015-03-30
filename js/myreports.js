@@ -8,7 +8,7 @@ $(document).ready(function() {
             
             $("#techrept").click(function(){
                 var thead = ('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>');
-                var tr = '<thead><tr>';
+                var tr = '<thead><th><tr>';
                 for (i=0;i<tickets.length;i++)
                 {
                     var ticket = tickets[i];
@@ -17,9 +17,9 @@ $(document).ready(function() {
 
                     if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
 
-                    tr+='<td>' + ticket["first_name"] + '</td><td>' + ticket["tickets_closed"] + '</td>';
+                    tr+='<td>' + ticket["first_name"] + '</td><td>' + ticket["tickets_closed"] + '</td></tr>';
                 }
-                tr+='</tr></thead>';
+                tr+='</th></thead>';
                 dataTable.append(thead+tr);
                 console.log(tickets);
             });
