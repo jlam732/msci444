@@ -4,7 +4,7 @@ $(document).ready(function() {
         type: 'get',
         success: function(data){
             var tickets=JSON.parse(data);
-            var dataTable = $('#dataTables-example tbody');
+            var dataTable = $('#technicianTable tbody');
             for (i=0;i<tickets.length;i++)
             {
                 var ticket = tickets[index];
@@ -14,39 +14,22 @@ $(document).ready(function() {
                 if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
             }
             $("#techrept").click(function(){
-                dataTable.append('<div id="page-wrapper">
-                    <div class="row">
-                    <div class="col-lg-12">
-                    <h1 class="page-header">Technician Report</h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                    </div>
-                    <!-- /.row -->
-                    <div class="row">
-                    <div class="alert alert-danger" style="display:none;"></div>
-                    <div class="dataTable_wrapper">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                dataTable.append('
                     <thead>
                     <tr>
-                    <th>Name: </th>' + ticket["first_name"] + '
-                    <th>Number of Tickets closed: </th>' + ticket["tickets_closed"] + '
+                    <th>' + ticket["first_name"] + '</th>
+                    <th>' + ticket["tickets_closed"] + '</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    </tbody>
-                    </table>
-                    </div>
-                    <!-- /.table-responsive -->
-                    </div>
-                    </div>')
-});
+                    ')
+            });
             $("#tickrept").click(function(){
 
             });
 
-            $('#dataTables-example').DataTable({
-               responsive: true,
-           });
+            $('#technicianTable').DataTable({
+             responsive: true,
+            });
         },
         error: function(error){
             console.log(error);
