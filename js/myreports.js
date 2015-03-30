@@ -9,11 +9,11 @@ $(document).ready(function() {
             url: '../php/get_myReports.php',
             type: 'get',
             success: function(data){
-                var [tickets, dates] = JSON.parse(data);
+                var tickets = JSON.parse(data);
                 thead.append("<tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr>");
 		tr = "";
                 for(var index = 0; index < tickets.length; index++) {
-                    var ticket = tickets[index];
+                    var ticket = tickets.closedTicket[index];
                     ticket["first_name"] += " " + ticket["last_name"];
                     delete ticket["last_name"];
                     if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
@@ -43,11 +43,11 @@ $(document).ready(function() {
             url: '../php/get_myReports.php',
             type: 'get',
             success: function(data){
-                var [tickets, dates] = JSON.parse(data);
+                var dates = JSON.parse(data);
                 thead.append("<tr><th>Date</th><th>Number of Tickets Created</th></tr>");
         tr = "";
                 for(var index = 0; index < tickets.length; index++) {
-                    var date = dates[index];
+                    var date = dates.ticketDate[index];
                     
                     tr+='<tr><td>' + date["creationDate"] + '</td><td>' + date["id"] + '</td></tr>';
                 }
