@@ -5,20 +5,19 @@ $(document).ready(function() {
         success: function(data){
             var tickets=JSON.parse(data);
             var dataTable = $('#technicianTable tbody');
-            for (i=0;i<tickets.length;i++)
-            {
-                var ticket = tickets[i];
-                ticket["first_name"] += " " + ticket["last_name"];
-                delete ticket["last_name"];
-
-                if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
-            }
+            
             $("#techrept").click(function(){
                 var thead = ('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>');
                 var tr = '<thead><tr>';
                 for (i=0;i<tickets.length;i++)
                 {
-                    tr+='<td>' + tickets["first_name"] + ' ' + tickets["last_name"] + '</td><td>' + ticket["tickets_closed"] + '</td>';
+                    var ticket = tickets[i];
+                    ticket["first_name"] += " " + ticket["last_name"];
+                    delete ticket["last_name"];
+
+                    if(ticket["first_name"] == "null null") { ticket["first_name"] = ""; }
+
+                    tr+='<td>' + ticket["first_name"] + '</td><td>' + ticket["tickets_closed"] + '</td>';
                 }
                 tr+='</tr></thead>';
                 dataTable.append(thead+tr);
