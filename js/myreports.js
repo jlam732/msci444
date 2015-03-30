@@ -5,8 +5,15 @@ $(document).ready(function() {
         success: function(data){
             var tickets=JSON.parse(data);
             var dataTable = $('#technicianTable tbody');
-            
+            clickcounter=0;
             $("#techrept").click(function(){
+
+
+                clickcounter++;
+                if (clickcounter>1){
+                    $("#techrept").die();
+                }
+
                 var thead = ('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>');
                 var tr = '<thead><th><tr>';
                 var percent = new Array(tickets.length);
@@ -38,19 +45,6 @@ $(document).ready(function() {
                 tr+='</thead>';
                 dataTable.append(thead+tr);
                 console.log(tickets);
-
-
-
-
-                var prm = Sys.WebForms.PageRequestManager.getInstance();
-                prm.add_InitializeRequest(abortPostbacks);
-
-                function abortPostbacks(sender, args) {
-                    if (prm.isInAsyncPostBack)
-                    args.set_cancel(true);
-                }
-
-
             });
             $("#tickrept").click(function(){
 
