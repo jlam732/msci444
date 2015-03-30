@@ -13,7 +13,7 @@ $(document).ready(function() {
                 console.log(tickets.closedTicket[1]);
                 thead.append("<tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr>");
 		tr = "";
-                for(var index = 0; index < tickets.length; index++) {
+                for(var index = 0; index < tickets.closedTicket.length; index++) {
                     var ticket = tickets.closedTicket[index];
                     ticket["first_name"] += " " + ticket["last_name"];
                     delete ticket["last_name"];
@@ -47,7 +47,7 @@ $(document).ready(function() {
                 var dates = JSON.parse(data);
                 thead.append("<tr><th>Date</th><th>Number of Tickets Created</th></tr>");
         tr = "";
-                for(var index = 0; index < tickets.length; index++) {
+                for(var index = 0; index < dates.ticketDate.length; index++) {
                     var date = dates.ticketDate[index];
                     
                     tr+='<tr><td>' + date["creationDate"] + '</td><td>' + date["id"] + '</td></tr>';
