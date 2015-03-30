@@ -7,7 +7,7 @@ $(document).ready(function() {
             var dataTable = $('#technicianTable tbody');
             for (i=0;i<tickets.length;i++)
             {
-                var ticket = tickets[index];
+                var ticket = tickets[i];
                 ticket["first_name"] += " " + ticket["last_name"];
                 delete ticket["last_name"];
 
