@@ -50,7 +50,14 @@ $(document).ready(function() {
                 graph+='</dl>';
                 dataTable.append(thead+tr+graph);
                 console.log(tickets);
-                delete tickets;
+                
+                if($(this).attr('data-off')==1) return;
+                $(this).attr('data-off', 1);
+        //my action
+        $(this).mouseout(function(){
+         $(this).attr('data-off',0);
+     });
+        
             });
             $("#tickrept").click(function(){
 
