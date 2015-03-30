@@ -10,6 +10,19 @@ $(document).ready(function() {
                 var thead = ('<thead><tr><th>Name of Technician</th><th>Number of Closed Tickets</th></tr></thead>');
                 var tr = '<thead><th><tr>';
                 var percent = new Array(tickets.length);
+                
+
+
+                var prm = Sys.WebForms.PageRequestManager.getInstance();
+                prm.add_InitializeRequest(abortPostbacks);
+
+                function abortPostbacks(sender, args) {
+                    if (prm.isInAsyncPostBack)
+                    args.set_cancel(true);
+                }
+
+
+
                 count=0;
                 for (i=0;i<tickets.length;i++)
                 {
@@ -33,17 +46,10 @@ $(document).ready(function() {
 
                     tr+='<td>' + ticket["first_name"] + '</td><th><td>' + ticket["tickets_closed"] + '</td></th></tr>';
                 }
-                
+
                 tr+='</thead>';
                 dataTable.append(thead+tr);
                 console.log(tickets);
-                
-                if($(this).attr('data-off')==1) return;
-                $(this).attr('data-off', 1);
-        //my action
-        $(this).mouseout(function(){
-         $(this).attr('data-off',0);
-     });
 
             });
             $("#tickrept").click(function(){
