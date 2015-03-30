@@ -131,7 +131,8 @@
                 <div class="alert alert-danger" style="display:none;"></div>
                 <div class="dataTable_wrapper">
                     <table class="table table-striped table-bordered table-hover" id="technicianTable">
-                        
+                        <thead>
+                        </thead>            
                         <tbody>
                         </tbody>
                     </table>
