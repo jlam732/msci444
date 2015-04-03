@@ -67,7 +67,8 @@ $(document).ready(function() {
         });
     });
 
-    $(".fancybox").click(function() {
+    $(".fancybox").click(function(event) {
+        event.preventDefault();
         $(this).toggleClass("blueBorder");
     });
 });
