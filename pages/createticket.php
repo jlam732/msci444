@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="mytickets.php">MYSYDE IT Consulting Group</a>
+                <a class="navbar-brand" href="mytickets.php">Company Name</a>
             </div>
             <!-- /.navbar-header -->
 

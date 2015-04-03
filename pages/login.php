@@ -1,7 +1,4 @@
-<?php
-    session_unset();
-    session_destroy();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +38,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
+                <div class="page-header">
+                  <h1 class="logo">Company <small>slogan</small></h1>
+                </div>
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
