@@ -61,6 +61,9 @@
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
+                <li>
+                    <div id='andro-clock'><div id='date'></div></div>
+                </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -171,6 +174,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
     <script src="../js/myreports.js"></script>
+    <script src="../js/includetime.js"></script>
 </body>
 
 </html>
