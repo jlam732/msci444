@@ -185,8 +185,12 @@
             </div>
         </div>
         <!-- /#page-wrapper -->
-
-
+        <div class="footer">
+            <footer>
+                <hr>
+                    <p style="text-align:right;">IT Telephone: *562  |   IT Email: <a href="mailto:it@company.com">helpdesk@company.com</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>                  
+            </footer>
+        </div>
     </div>
     <!-- /#wrapper -->
 
