@@ -149,7 +149,7 @@
                     <h2>Basic Reports</h2>
                     <div class='list-group gallery'>
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/report_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Report 1</small>
@@ -157,7 +157,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/horbar_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Report 2</small>
@@ -165,7 +165,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/multibar_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Report 3</small>
@@ -173,7 +173,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/piechart_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Report 4</small>
@@ -181,7 +181,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/linegraph_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Report 5</small>
@@ -189,7 +189,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/full_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Report 6</small>
@@ -204,7 +204,7 @@
                     <h2>Advanced Reports</h2>
                     <div class='list-group gallery' style="height:180px;">
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/tech_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Component 1</small>
@@ -212,7 +212,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/techs_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Component 2</small>
@@ -220,7 +220,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" height="67" alt="" src="../dist/img/checkmark_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Component 3</small>
@@ -228,7 +228,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/time_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Component 4</small>
@@ -236,7 +236,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/time_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Component 5</small>
@@ -244,7 +244,7 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                            <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/time_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Component 6</small>

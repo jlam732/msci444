@@ -66,4 +66,8 @@ $(document).ready(function() {
             }
         });
     });
+
+    $(".fancybox").click(function() {
+        $(this).css("border", "1px solid blue");
+    });
 });
