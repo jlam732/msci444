@@ -35,6 +35,7 @@
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" href="../dist/css/jquery.fancybox.css" media="screen">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -143,10 +144,124 @@
                 <!-- /.table-responsive -->
             </div>
 
-
-
-            <button id="techrept" class="btn btn-default">Technician Report</button>
-            <button id="tickrept" class="btn btn-default">Ticket Report</button>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Basic Reports</h2>
+                    <div class='list-group gallery'>
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/report_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Report 1</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/horbar_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Report 2</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/multibar_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Report 3</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/piechart_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Report 4</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/linegraph_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Report 5</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/full_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Report 6</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                    </div> <!-- list-group / end -->
+                </div>
+            </div> <!-- row / end -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Advanced Reports</h2>
+                    <div class='list-group gallery' style="height:180px;">
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/tech_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Component 1</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/techs_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Component 2</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" height="67" alt="" src="../dist/img/checkmark_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Component 3</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/time_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Component 4</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/time_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Component 5</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                                <img class="img-responsive" alt="" src="../dist/img/time_icon.png" />
+                                <div class='text-right'>
+                                    <small class='text-muted'>Component 6</small>
+                                </div> <!-- text-right / end -->
+                            </a>
+                        </div> <!-- col-6 / end -->
+                        <div class="col-md-1 col-md-offset-11">
+                            <button id="techrept" class="btn btn-default">Save</button>
+                        </div>
+                    </div> <!-- list-group / end -->
+                </div>
+            </div> <!-- row / end -->
+            <div class="row">
+                <div class="col-md-2 col-sm-offset-10" style="padding-left:30px;">
+                    <button id="tickrept" class="btn btn-default">Generate Report</button>
+                </div>
+            </div>
         </div>
         <!-- /#page-wrapper -->
         <div class="footer">
@@ -175,6 +290,7 @@
     <script src="../dist/js/sb-admin-2.js"></script>
     <script src="../js/myreports.js"></script>
     <script src="../js/includetime.js"></script>
+    <script src="../dist/js/jquery.fancybox.js"></script>
 </body>
 
 </html>

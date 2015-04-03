@@ -352,3 +352,11 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+.gallery {
+    height: 120px;
+    border: 1px solid black;
+    padding: 4px;
+    padding-top:15px;
+    border-radius:20px;
+}
