@@ -360,3 +360,7 @@ table.dataTable thead .sorting:after {
     padding-top:15px;
     border-radius:20px;
 }
+
+.blueBorder {
+    border: 1px solid blue;
+}
