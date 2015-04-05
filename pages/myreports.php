@@ -252,14 +252,14 @@
                             </a>
                         </div> <!-- col-6 / end -->
                         <div class="col-md-1 col-md-offset-11">
-                            <button id="techrept" class="btn btn-default">Save</button>
+                            <button id="techrept" class="btn btn-primary">Save</button>
                         </div>
                     </div> <!-- list-group / end -->
                 </div>
             </div> <!-- row / end -->
             <div class="row">
                 <div class="col-md-2 col-sm-offset-10" style="padding-left:30px;">
-                    <button id="tickrept" class="btn btn-default">Generate Report</button>
+                    <button id="tickrept" class="btn btn-success">Generate Report</button>
                 </div>
             </div>
         </div>
