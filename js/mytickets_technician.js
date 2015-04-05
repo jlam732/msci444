@@ -15,7 +15,8 @@ $(document).ready(function() {
                 for (var key in ticket) {
                     if (ticket.hasOwnProperty(key)) {
                         if(key == "id") {
-                            tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button>' + ticket[key] + "</td>";
+                            tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button></td>';
+                            tr += "<td>" + (ticket[key] == null ? "" : ticket[key]) + "</td>";
                         } else {
                             tr += "<td>" + (ticket[key] == null ? "" : ticket[key]) + "</td>";
                         }
@@ -61,7 +62,8 @@ $(document).ready(function() {
                 for (var key in ticket) {
                     if (ticket.hasOwnProperty(key)) {
                         if(key == "id") {
-                            tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket2">Edit</button>' + ticket[key] + "</td>";
+                            tr += '<td><button type="button" data-id="' + ticket["id"] + '" class="btn btn-primary editTicket">Edit</button></td>';
+                            tr += "<td>" + (ticket[key] == null ? "" : ticket[key]) + "</td>";
                         } else {
                             tr += "<td>" + (ticket[key] == null ? "" : ticket[key]) + "</td>";
                         }
