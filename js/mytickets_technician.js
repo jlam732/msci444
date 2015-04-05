@@ -25,8 +25,14 @@ $(document).ready(function() {
                 dataTable.append(tr + "</tr>");
             }
             $('#dataTables-example').DataTable({
-      	      responsive: true,
-    	    });
+              responsive: true,
+              "columnDefs": [
+                    {
+                        "targets": [ 1 ],
+                        "searchable": false
+                    }
+                ]
+            });
 
             $('.editTicket').click(function() {
                 var ticket_id = $(this).data("id");
@@ -66,6 +72,12 @@ $(document).ready(function() {
             }
             $('#dataTables-example2').DataTable({
               responsive: true,
+              "columnDefs": [
+                    {
+                        "targets": [ 1 ],
+                        "searchable": false
+                    }
+                ]
             });
 
             $('.editTicket2').click(function() {

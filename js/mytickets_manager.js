@@ -30,6 +30,12 @@ $(document).ready(function() {
             }
             $('#dataTables-example').DataTable({
               responsive: true,
+              "columnDefs": [
+                    {
+                        "targets": [ 1 ],
+                        "searchable": false
+                    }
+                ]
             });
 
             $('.editTicket').click(function() {

@@ -137,6 +137,7 @@
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example2">
                         <thead>
                             <tr>
+                                <th>Edit</th>
                                 <th>Ticket ID</th>
                                 <th>Type</th>
                                 <th>Subject</th>
@@ -170,6 +171,7 @@
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
+                                <th>Edit</th>
                                 <th>Ticket ID</th>
                                 <th>Type</th>
                                 <th>Subject</th>

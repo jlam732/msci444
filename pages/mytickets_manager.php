@@ -133,6 +133,7 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
+                                            <th>Edit</th>
                                             <th>Ticket ID</th>
                                             <th>Type</th>
                                             <th>Subject</th>
@@ -140,7 +141,7 @@
                                             <th>Status</th>
                                             <th>Priority</th>
                                             <th>Creator</th>
-                                            <th>Technician Assigned</th>
+                                            <th>Technician</th>
                                             <th>Date Created</th>                                            
                                         </tr>
                                     </thead>
