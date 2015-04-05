@@ -147,7 +147,7 @@
                                 <th>Description</th>
                                 <th>Status</th>
                                 <th>Priority</th>
-                                <th>Technician Assigned</th>
+                                <th>Technician</th>
                                 <th>Date Created</th>
                             </tr>
                         </thead>
