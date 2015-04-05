@@ -147,10 +147,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Basic Reports</h2>
-                    <div class='list-group gallery'>
+                    <div id="basicReports" class='list-group gallery'>
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
                             <a class="thumbnail fancybox" rel="ligthbox" href="#">
-                                <img class="img-responsive" alt="" src="../dist/img/report_icon.png" />
+                                <img class="img-responsive" style="height:51px;" alt="" src="../dist/img/report_icon.png" />
                                 <div class='text-right'>
                                     <small class='text-muted'>Report 1</small>
                                 </div> <!-- text-right / end -->
@@ -202,7 +202,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Advanced Reports</h2>
-                    <div class='list-group gallery' style="height:180px;">
+                    <div id="advancedReports" class='list-group gallery' style="height:180px;">
                         <div class='col-sm-3 col-xs-6 col-md-2 col-lg-2'>
                             <a class="thumbnail fancybox" rel="ligthbox" href="#">
                                 <img class="img-responsive" alt="" src="../dist/img/tech_icon.png" />
